@@ -9,13 +9,17 @@ const categorySchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-// Cascade Delete Logic: Remove all products when category is deleted
-categorySchema.pre("findOneAndDelete", async function (next) {
-  const docToUpdate = await this.model.findOne(this.getQuery());
-  if (docToUpdate) {
-    await mongoose.model("Product").deleteMany({ category: docToUpdate._id });
+// CASCADE DELETE: Before a category is deleted, remove all products linked to it
+categorySchema.pre('findOneAndDelete', async function(next) {
+  const categoryId = this.getQuery()._id;
+  
+  // We access the Product model to wipe related items
+  try {
+    await mongoose.model('Product').deleteMany({ category: categoryId });
+    next();
+  } catch (error) {
+    next(error);
   }
-  next();
 });
 
 module.exports = mongoose.model("Category", categorySchema);
