@@ -4,8 +4,17 @@ import InventoryIcon from "@mui/icons-material/Inventory";
 import WarningIcon from "@mui/icons-material/Warning";
 import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import axios from "../api/axios";
+import {
+  PieChart,
+  Pie,
+  Cell,
+  Tooltip,
+  ResponsiveContainer,
+  Legend,
+} from "recharts";
 
 const Dashboard = () => {
+  const [chartData, setChartData] = useState([]);
   const [stats, setStats] = useState({
     totalProducts: 0,
     lowStockCount: 0,
@@ -19,6 +28,16 @@ const Dashboard = () => {
     };
     fetchStats();
   }, []);
+
+  useEffect(() => {
+    const fetchAnalytics = async () => {
+      const res = await axios.get("/reports/analytics");
+      setChartData(res.data.categoryDistribution);
+    };
+    fetchAnalytics();
+  }, []);
+
+  const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "#8884d8"];
 
   const StatCard = ({ title, value, icon, color }) => (
     <Paper
@@ -71,7 +90,45 @@ const Dashboard = () => {
           />
         </Grid>
       </Grid>
-      {/* Add Chart.js components here later */}
+      <Grid container spacing={3} sx={{ mt: 2 }}>
+        <Grid item xs={12} md={6}>
+          <Paper sx={{ p: 3, height: 400 }}>
+            <Typography variant="h6" gutterBottom>
+              Stock by Category
+            </Typography>
+            <ResponsiveContainer width="100%" height="100%">
+              <PieChart>
+                <Pie
+                  data={chartData}
+                  innerRadius={60}
+                  outerRadius={100}
+                  paddingAngle={5}
+                  dataKey="value"
+                >
+                  {chartData.map((entry, index) => (
+                    <Cell
+                      key={`cell-${index}`}
+                      fill={COLORS[index % COLORS.length]}
+                    />
+                  ))}
+                </Pie>
+                <Tooltip />
+                <Legend />
+              </PieChart>
+            </ResponsiveContainer>
+          </Paper>
+        </Grid>
+
+        {/* Placeholder for Recent Activity or Stock Table */}
+        <Grid item xs={12} md={6}>
+          <Paper sx={{ p: 3, height: 400, overflow: "auto" }}>
+            <Typography variant="h6" gutterBottom>
+              Low Stock Alerts
+            </Typography>
+            {/* Map through products with 'Low Stock' status here */}
+          </Paper>
+        </Grid>
+      </Grid>
     </Box>
   );
 };
