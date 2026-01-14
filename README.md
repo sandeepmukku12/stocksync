@@ -50,3 +50,18 @@ The system provides **real-time inventory tracking** ⏱️, **low-stock alerts*
 - 🛡️ **Bcryptjs** – Hashes passwords for secure user authentication.
 
 ---
+
+## ✨ Features
+
+- 🔐 **Role-Based Access Control (RBAC)** - Distinct interfaces for **Admins** (Full Control) and **Staff** (Restricted View).
+- 📊 **Live Stock Tracking** - Real-time calculation of **In Stock**, **Low Stock**, and **Out of Stock** statuses.
+- 🚚 **Supplier Management** - Complete supplier CRM with **cascade deletion logic** (removing a supplier also deletes linked products).
+- 👥 **User Management** - Admins can **create, promote, or deactivate** staff accounts.
+- 🔍 **Centralized Search & Filters** - Quick filtering by **category**, **supplier** and **stock status**.
+
+- 🔐 **Authentication**: **JWT-secured** login (Admin controlled).  
+- 📘 **Products & Categories**: **CRUD** operations with **validation**.  
+- 👥 **Suppliers**: **Manage** suppliers and **relationships** with products.  
+- ⚠️ **Cascade Delete**: Deleting a product category or supplier automatically removes related products.
+
+---
