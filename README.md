@@ -195,3 +195,36 @@ stocksync/
 ```
 
 ---
+
+## 🗂 Key Files
+
+Here are the important files in the StockSync project and their purposes:
+
+### 🖥️ Frontend (`client/`)
+- `src/App.jsx` – Main React component that wraps all pages and routes.  
+- `src/main.jsx` – Entry point for the React + Vite app.  
+- `src/components/` – Reusable UI components like ProtectedRoute, Sidebar.  
+- `src/pages/` – Individual pages (Login, Register, Dashboard, Products, Categories, Suppliers, Users Management, Profile).    
+- `src/api/` – Handles API calls to the backend using Axios.  
+- `src/context/` – Global state management for auth.  
+
+### ⚙️ Backend (`server/`)
+- `index.js` – Entry point for the Express backend server and MongoDB connection setup.  
+- `.env` – Stores environment variables like `PORT`, `MONGODB_URI`, and `JWT_SECRET`.  .  
+- `controllers/` – Handle incoming requests and interact with services.  
+  - `auth.controller.js` – Register/Login, Update Password endpoints.  
+  - `user.controller.js` – User profile endpoints.  
+  - `product.controller.js` – Product CRUD, status and search logic.  
+  - `category.controller.js` – Category CRUD logic.
+  - `supplier.controller.js` – Supplier CRUD logic. 
+  - `report.controller.js` – Dashboard stats logic.  
+- `models/` – Mongoose schemas for User, product, supplier, category. 
+- `routes/` – API endpoint definitions.  
+- `services/` – Business logic separate from controllers.  
+- `middleware/` – JWT authentication and centralized error handling.
+
+### 🏠 Root Files
+- `README.md` – Project documentation.  
+- `.env` – Environment variables for backend configuration.
+
+---
