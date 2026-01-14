@@ -13,6 +13,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("API running successfully");
+});
 app.use("/api", routes);
 
 // GLOBAL ERROR HANDLER
