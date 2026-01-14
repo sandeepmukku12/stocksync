@@ -65,3 +65,13 @@ The system provides **real-time inventory tracking** ⏱️, **low-stock alerts*
 - ⚠️ **Cascade Delete**: Deleting a product category or supplier automatically removes related products.
 
 ---
+
+## 🎨 UI Highlights
+
+- ✨ **Clean Design** – Built with Material-UI for a modern and consistent look.  
+- 🔔 **Toast Notifications** – Real-time alerts for user actions and feedback.  
+- ⚡ **Demo Quick-Start** - One-click demo login buttons on the authentication page for instant access.
+- 🧭 **Dynamic Sidebar** - Navigation items conditionally render based on **user permissions**.
+- 🏷️ **Status Badging** - Visual **color-coding** to clearly represent inventory health.  
+
+---
