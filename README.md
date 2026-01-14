@@ -134,3 +134,38 @@ To get started with **Study Flux**, follow these steps:
 - Make sure the backend server is running before using the frontend.
 
 ---
+
+## 🚀 Usage
+
+### 1️⃣ Authentication & Demo Access
+- 🌐 **Access the App** - Open `http://localhost:5173` in your browser.
+- ⚡ **Quick Login** - Use the **Admin** or **Staff** demo buttons on the login screen to auto-fill credentials.
+- 🔐 **Security Check** - Public registration is disabled — only an **Admin** can add new team members.
+
+
+### 2️⃣ The Admin Experience (Full Control)
+- 📊 **Dashboard Analytics** - View real-time stock distribution and value charts powered by **📊 Recharts**.
+- 👥 **User Management** - Navigate to the **Users Management** tab to view all staff. Try promoting a **Staff** member to **Admin**.
+- 📦 **Product Inventory** - Add new products or edit existing stock. When an item falls below its **Low Stock Threshold**, the UI instantly displays a **⚠️ Low Stock** badge.
+- 📦 **Categories** - Add new category or edit existing category.
+- 🚚 **Suppliers** - Add new supplier or edit existing supplier.
+
+
+### 3️⃣ The Staff Experience (Restricted)
+- 🚫 **Permission Enforcement** - Log out and sign in as **Staff** — the **Users** management tab will no longer appear in the sidebar.
+- 👀 **View-Only Access** - Staff can monitor inventory and update stock levels but are restricted from sensitive administrative settings.
+
+
+### 4️⃣ Data Integrity & Cascade Logic
+- 🚚 **Supplier Management** - Navigate to the **Suppliers** tab.
+- 🧨 **Test Cascade Delete** - Delete a supplier from the list.
+- ✅ **Verification** - Return to the **Products** page — all products linked to that supplier are automatically removed to maintain data integrity  
+  *(handled via Mongoose middleware)*.
+
+
+### 5️⃣ Search & Optimization
+- 🔍 **Global Search** - Use the table search bar to find products by **Name** or **SKU**.
+
+- 🧩 **Responsive Filtering** - Filter inventory by **Category** or **Supplier** or **Stock Status** (**In Stock**, **Low Stock**, **Out of Stock**) to see the dynamic UI in action.
+
+---
