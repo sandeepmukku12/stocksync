@@ -19,6 +19,7 @@ The system provides **real-time inventory tracking** ⏱️, **low-stock alerts*
 - [🖼️ Screenshots](#-screenshots)
 - [📦 Installation & Setup](#-installation--setup)
 - [🚀 Usage](#-usage)
+- [🎮 Demo Access](#-demo-access)
 - [🏗 App Structure](#-app-structure)
 - [🗂 Key Files](#-key-files)
 - [🧩 Core Functionality](#-core-functionality)
@@ -165,6 +166,23 @@ To get started with **Study Flux**, follow these steps:
 ### 5️⃣ Search & Optimization
 - 🔍 **Global Search** - Use the table search bar to find products by **Name** or **SKU**.
 - 🧩 **Responsive Filtering** - Filter inventory by **Category** or **Supplier** or **Stock Status** (**In Stock**, **Low Stock**, **Out of Stock**) to see the dynamic UI in action.
+
+---
+
+## 🎮 Demo Access
+
+You can try out StockSync using the following demo credentials:
+
+- **Admin Account**  
+  📧 Email: `admin@demo.com`  
+  🔑 Password: `admin123`
+
+- **Staff Account**  
+  📧 Email: `staff@demo.com`  
+  🔑 Password: `staff123`
+
+> ⚠️ **Important:** These accounts are **for testing/demo purposes only**.  
+> **Do not change the password or modify critical data**, and do **not use them for production data**. All changes may be reset.
 
 ---
 
