@@ -341,3 +341,12 @@ StockSync uses a structured, relational approach within **MongoDB** to manage in
 This project is licensed under the **MIT License**. See the LICENSE file for more info.
 
 ---
+
+## ❤️ Built With Love
+
+**StockSync** was built with ❤️ by **Sandeep Mukku**  
+It’s designed to help teams **manage inventory**, **track stock levels**, and **maintain data consistency** through a simple and reliable system.
+
+Thank you for checking out the project! 🙌
+
+---
