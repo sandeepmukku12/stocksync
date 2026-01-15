@@ -324,3 +324,14 @@ StockSync uses a structured, relational approach within **MongoDB** to manage in
 - 👤 **Ownership Rules** – Products, categories, and suppliers store a `createdBy` field to enforce permission-based updates and deletions.
 
 ---
+
+## 📈 Future Enhancements
+
+- 🔔 **Real-Time Stock Alerts via in-app notfications or email**
+- 📊 **Advanced Analytics Dashboard**
+- 👥 **Role-Based Access Expansion**  
+- 🧾 **Inventory History & Audit Logs**
+- 📦 **Support for CSV/Excel-based Import & Export**  
+- 🌐 **Multi-Warehouse Support**
+
+---
