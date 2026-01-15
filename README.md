@@ -269,3 +269,20 @@ Here are the important files in the StockSync project and their purposes:
   - 👤 Profile 
 
 ---
+
+## 🔐 Security & Rules
+
+- 🔒 **Public Registration Disabled**
+  - New accounts can only be created by an Admin via the User Management panel.
+
+- 🔑 **JWT Authentication**
+  - All protected routes require a valid JWT token
+
+- 🛡️ **Protected Routes**
+  - Unauthorized users cannot access inventory APIs or dashboard pages
+
+- 🧹 **Data Integrity**
+  - Cascade delete logic ensures related data is removed safely
+  - Eliminates orphaned documents in the database
+
+---
