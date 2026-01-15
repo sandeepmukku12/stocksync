@@ -228,3 +228,44 @@ Here are the important files in the StockSync project and their purposes:
 - `.env` – Environment variables for backend configuration.
 
 ---
+
+## 🧩 Core Functionality
+
+### 🔐 Authentication
+  - Secure login using JWT-based authentication
+  - Protected frontend routes and backend APIs
+
+### 📦 Inventory Management
+  - Create, view, update, and delete products
+  - Manage product categories and suppliers
+  - Stock status is dynamically determined by comparing quantity against a custom lowStockThreshold set per product.
+  - Automatic stock status updates (In Stock, Low Stock, Out of Stock)
+
+### ⚠️ Cascade Delete
+  - Deleting a category or supplier automatically removes all related products
+  - Ensures data consistency and prevents orphan records
+
+### 📊 Stock Monitoring
+  - Low-stock threshold tracking
+  - Visual indicators for inventory status
+
+### 🧭 Admin Dashboard
+  - Centralized view of products, categories, and suppliers
+  - Intuitive navigation through sidebar layout
+
+### 👥 User Management
+  -  Admins can create, promote, or deactivate staff accounts.
+
+### 👤 Profile  
+  - Change password securely 
+
+### 🧭 Navigation (Sidebar)
+  - The sidebar is persistent across all pages and includes:
+  - 📊 Dashboard
+  - 📦 Products
+  - 🗂️ Categories
+  - 🚚 Suppliers
+  - 👥 User Management  
+  - 👤 Profile 
+
+---
