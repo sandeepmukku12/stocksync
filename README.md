@@ -315,8 +315,6 @@ This architecture ensures:
 
 StockSync uses a structured, relational approach within **MongoDB** to manage inventory data while maintaining strong relationships between products, categories, suppliers, and users.
 
----
-
 ### Logic Highlights
 
 - 🔁 **User ↔ Product** – One-to-Many relationship where users can create and manage multiple products.  
