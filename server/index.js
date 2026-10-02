@@ -1,6 +1,3 @@
-import dns from "dns";
-dns.setServers(["8.8.8.8", "8.8.4.4"]); // 🌟 Fixes the Render querySrv ENOTFOUND error
-
 import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
